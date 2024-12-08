@@ -18,14 +18,11 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Navigate to Project Folder
-      run: cd Spotlight
-
-    - name: Install Dependencies
-      run: npm ci
-
-    - name: Build
-      run: npm run build --prod -- --output-path=dist --base-href=https://nityam2002.github.io/
+    - name: Install and Build
+      run: |
+        cd Spotlight
+        npm ci
+        npm run build --prod -- --output-path=dist --base-href=https://nityam2002.github.io/
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
