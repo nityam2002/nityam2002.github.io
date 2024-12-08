@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+@use './m3-theme.scss';
+
+// Include Angular Material core styles
+@include mat.core();
+
+@mixin light-theme {
+  @include mat.all-component-themes(m3-theme.$light-theme);
+  @include mat.core-theme(m3-theme.$light-theme);
+  @include mat.system-level-colors(m3-theme.$light-theme);
+  @include mat.typography-hierarchy(m3-theme.$light-theme);
+}
+
+@mixin dark-theme {
+  @include mat.all-component-themes(m3-theme.$dark-theme);
+  @include mat.core-theme(m3-theme.$dark-theme);
+  @include mat.system-level-colors(m3-theme.$dark-theme);
+  @include mat.typography-hierarchy(m3-theme.$dark-theme);
+}
+
+html, body {
+  background: var(--mat-sys-surface-container-high);
+  @include dark-theme;
+
+}
+
+body.light-theme {
+  @include light-theme;
+}
+
+body.dark-theme {
+  @include dark-theme;
+}
