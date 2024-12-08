@@ -22,7 +22,7 @@ jobs:
       run: |
         cd Spotlight
         npm ci
-        npm run build --prod -- --output-path=dist --base-href=https://nityam2002.github.io/
+        npm run build --prod -- --output-path=dist --base-href=https://nityamdixit.me/
 
     - name: Add Custom Domain
       run: echo 'nityamdixit.me' > Spotlight/dist/browser/CNAME
