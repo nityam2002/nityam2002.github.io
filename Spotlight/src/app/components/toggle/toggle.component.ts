@@ -1,12 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { Component, OnInit } from '@angular/core';
 import {
-  MatButtonToggleChange,
-  MatButtonToggleModule,
+  MatButtonToggleModule
 } from '@angular/material/button-toggle';
-import { Theme, ThemeService } from '../../services/theme.service';
+import { MatIconModule } from '@angular/material/icon';
 import { Observable, Subject, takeUntil } from 'rxjs';
+import { Theme, ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-toggle',
