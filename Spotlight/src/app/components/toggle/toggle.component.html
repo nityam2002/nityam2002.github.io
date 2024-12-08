@@ -1,0 +1,54 @@
+<div class="flex justify-start pt-4 px-4">
+  <div class="flex">
+    <mat-button-toggle-group
+      (click)="changeTheme($event)"
+      [hideSingleSelectionIndicator]="true"
+      class="flex items-center rounded-full"
+      appearance="standard"
+      [value]="selectedThemePreference"
+    >
+      <mat-button-toggle
+        value="system"
+        class="w-full items-center justify-center"
+      >
+        <mat-icon
+          [ngClass]="{
+            'material-symbols-outlined': selectedThemePreference !== 'system',
+            'material-symbols-filled': selectedThemePreference === 'system'
+          }"
+          class="text-[20px] items-center justify-center"
+        >
+          laptop_windows
+        </mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle
+        value="light"
+        class="w-full items-center justify-center"
+      >
+        <mat-icon
+          [ngClass]="{
+            'material-symbols-outlined': selectedThemePreference !== 'light',
+            'material-symbols-filled': selectedThemePreference === 'light'
+          }"
+          class="text-[20px] items-center justify-center"
+        >
+          light_mode
+        </mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle
+        value="dark"
+        class="w-full items-center justify-center"
+      >
+        <mat-icon
+          [ngClass]="{
+            'material-symbols-outlined': selectedThemePreference !== 'dark',
+            'material-symbols-filled': selectedThemePreference === 'dark'
+          }"
+          class="text-[20px] items-center justify-center"
+        >
+          dark_mode
+        </mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
